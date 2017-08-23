@@ -20,6 +20,8 @@ import (
 	"runtime"
 	"strings"
 
+	"gzosp/soong/android"
+
 	"github.com/google/blueprint/proptools"
 )
 
@@ -97,6 +99,9 @@ type variableProperties struct {
 		Needs_text_relocations struct {
 			Cppflags []string
 		}
+		// include gzosp variables
+		*android.Product_variables
+
 	} `android:"arch_variant"`
 }
 
@@ -168,6 +173,8 @@ type productVariables struct {
 	Uses_media_extensions      *bool `json:",omitempty"`
 	Needs_text_relocations     *bool `json:",omitempty"`
 
+	// include gzosp variables
+	*android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
