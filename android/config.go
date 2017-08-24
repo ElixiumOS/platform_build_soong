@@ -477,10 +477,6 @@ func (c *deviceConfig) BtConfigIncludeDir() string {
 	return String(c.config.ProductVariables.BtConfigIncludeDir)
 }
 
-func (c *deviceConfig) ForcedShimLibs() string {
-	return String(c.config.ProductVariables.ForcedShimLibs)
-}
-
 func (c *deviceConfig) NativeCoverageEnabled() bool {
 	return Bool(c.config.ProductVariables.NativeCoverage)
 }
