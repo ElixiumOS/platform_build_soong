@@ -170,6 +170,9 @@ type productVariables struct {
 	DeviceKernelHeaders []string `json:",omitempty"`
 
 	BoardUsesQTIHardware *bool `json:",omitempty"`
+
+	BoardUsesQCOMHardware *bool `json:",omitempty"`
+	TargetUsesQCOMBsp *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
